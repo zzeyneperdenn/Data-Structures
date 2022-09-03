@@ -1,11 +1,27 @@
 package main
 
 import (
+	"arrays/internal"
 	"log"
 )
 
 func main() {
 
+	ll := internal.NewLinkedList(5)
+	ll.Push(10)
+	ll.Push(15)
+	//ll.Head = 15
+	//ll.Head.Next = 10
+	//ll.Head.Next.Next = 5
+	ll.InsertAfter(ll.Head, 3)
+	ll.Append(9999)
+	//ll.Print()
+
+	dll := internal.NewDoublyLinkedList(1)
+	dll.Push(7)
+	dll.DoublyAppend(3)
+	dll.DoublyInsertAfter(dll.Head.Next, 2)
+	dll.Print()
 }
 
 func RunArray() {
